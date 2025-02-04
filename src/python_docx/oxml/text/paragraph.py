@@ -4,10 +4,20 @@
 
 from __future__ import annotations
 
-from typing import TYPE_CHECKING, Callable, List, cast
+from typing import TYPE_CHECKING, Callable, Dict, List, cast
 
+from python_docx.opc.oxml import qn
+from python_docx.oxml.comments import (
+    CT_Comment,
+    CT_CommentRangeEnd,
+    CT_CommentRangeStart,
+    CT_CommentReference,
+    CT_Comments,
+    CT_CommentsExtended,
+)
 from python_docx.oxml.parser import OxmlElement
-from python_docx.oxml.xmlchemy import BaseOxmlElement, ZeroOrMore, ZeroOrOne
+from python_docx.oxml.simpletypes import ST_String
+from python_docx.oxml.xmlchemy import BaseOxmlElement, OptionalAttribute, ZeroOrMore, ZeroOrOne
 
 if TYPE_CHECKING:
     from python_docx.enum.text import WD_PARAGRAPH_ALIGNMENT
@@ -16,6 +26,7 @@ if TYPE_CHECKING:
     from python_docx.oxml.text.pagebreak import CT_LastRenderedPageBreak
     from python_docx.oxml.text.parfmt import CT_PPr
     from python_docx.oxml.text.run import CT_R
+    from python_docx.parts.comments import CommentsExtendedPart, CommentsPart
 
 
 class CT_P(BaseOxmlElement):
@@ -26,6 +37,7 @@ class CT_P(BaseOxmlElement):
     hyperlink_lst: List[CT_Hyperlink]
     r_lst: List[CT_R]
 
+    para_id = OptionalAttribute("w14:paraId", ST_String)
     pPr: CT_PPr | None = ZeroOrOne("w:pPr")  # pyright: ignore[reportAssignmentType]
     hyperlink = ZeroOrMore("w:hyperlink")
     r = ZeroOrMore("w:r")
@@ -104,3 +116,35 @@ class CT_P(BaseOxmlElement):
     def _insert_pPr(self, pPr: CT_PPr) -> CT_PPr:
         self.insert(0, pPr)
         return pPr
+
+    def add_comment(
+        self,
+        comments_part: "CommentsPart",
+        comments_extended_part: "CommentsExtendedPart",
+        text: str,
+        metadata: Dict[str, str | bool | "CT_Comment"],
+    ) -> CT_Comment:
+        """
+        Add a comment to this paragraph.
+        """
+        comment_ele = cast(CT_Comments, comments_part.element)
+        comments_extended_ele = cast(CT_CommentsExtended, comments_extended_part.element)
+
+        new_p = cast(CT_P, OxmlElement("w:p"))
+        new_p.add_r().text = text
+        comment = comment_ele.add_comment(
+            new_p, metadata["author"], metadata["initials"], metadata["date"]
+        )
+        cmt_range_start = CT_CommentRangeStart.new(comment.id)
+        if self.find(qn("w:commentRangeStart")) is not None:
+            self.insert(0, cmt_range_start)
+        else:
+            self.insert_element_before(cmt_range_start, "w:commentRangeStart")
+        self.append(CT_CommentRangeEnd.new(comment.id))
+        self.add_r().append(CT_CommentReference.new(comment.id))
+
+        resolved = metadata.get("resolved", False)
+        parent = metadata.get("parent")
+        comments_extended_ele.add_comment_reference(comment, parent, resolved)
+
+        return comment
