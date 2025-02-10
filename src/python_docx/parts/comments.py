@@ -2,18 +2,18 @@
 
 from typing import TYPE_CHECKING, cast
 
-from docx.opc.constants import CONTENT_TYPE
-from docx.opc.packuri import PackURI
-from docx.oxml.parser import OxmlElement
-from docx.opc.part import XmlPart
-from docx.oxml.ns import nsmap
+from python_docx.opc.constants import CONTENT_TYPE
+from python_docx.opc.packuri import PackURI
+from python_docx.oxml.parser import OxmlElement
+from python_docx.opc.part import XmlPart
+from python_docx.oxml.ns import nsmap
 
 if TYPE_CHECKING:
-    from docx.oxml.comments import (
+    from python_docx.oxml.comments import (
         CT_Comments,
         CT_CommentsExtended,
     )
-    from docx.package import Package
+    from python_docx.package import Package
 
 
 class CommentsPart(XmlPart):

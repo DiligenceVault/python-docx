@@ -1,4 +1,4 @@
-"""Test suite for the docx.api module."""
+"""Test suite for the python_docx.api module."""
 
 import pytest
 
@@ -56,12 +56,12 @@ class DescribeDocument:
 
     @pytest.fixture
     def _default_docx_path_(self, request):
-        return function_mock(request, "docx.api._default_docx_path")
+        return function_mock(request, "python_docx.api._default_docx_path")
 
     @pytest.fixture
     def document_(self, request):
-        return instance_mock(request, docx.document.Document)
+        return instance_mock(request, python_docx.document.Document)
 
     @pytest.fixture
     def Package_(self, request):
-        return class_mock(request, "docx.api.Package")
+        return class_mock(request, "python_docx.api.Package")

@@ -18,7 +18,7 @@ from python_docx.shared import StoryChild
 from python_docx.text.paragraph import Paragraph
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.oxml.document import CT_Body
     from python_docx.oxml.section import CT_HdrFtr
     from python_docx.oxml.table import CT_Tc

@@ -1,4 +1,4 @@
-"""Test suite for the docx.oxml.styles module."""
+"""Test suite for the python_docx.oxml.styles module."""
 
 import pytest
 

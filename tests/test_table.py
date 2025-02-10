@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.table module."""
+"""Test suite for the python_docx.table module."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ from .unitutil.mock import FixtureRequest, Mock, instance_mock, property_mock
 
 
 class DescribeTable:
-    """Unit-test suite for `docx.table._Rows` objects."""
+    """Unit-test suite for `python_docx.table._Rows` objects."""
 
     def it_can_add_a_row(self, document_: Mock):
         snippets = snippet_seq("add-row-col")
@@ -324,7 +324,7 @@ class DescribeTable:
 
 
 class Describe_Cell:
-    """Unit-test suite for `docx.table._Cell` objects."""
+    """Unit-test suite for `python_docx.table._Cell` objects."""
 
     @pytest.mark.parametrize(
         ("tc_cxml", "expected_value"),
@@ -540,7 +540,7 @@ class Describe_Cell:
 
 
 class Describe_Column:
-    """Unit-test suite for `docx.table._Cell` objects."""
+    """Unit-test suite for `python_docx.table._Cell` objects."""
 
     def it_provides_access_to_its_cells(self, _index_prop_: Mock, table_prop_: Mock, table_: Mock):
         table_prop_.return_value = table_
@@ -621,7 +621,7 @@ class Describe_Column:
 
 
 class Describe_Columns:
-    """Unit-test suite for `docx.table._Columns` objects."""
+    """Unit-test suite for `python_docx.table._Columns` objects."""
 
     def it_has_sequence_behaviors(self, table_: Mock):
         columns = _Columns(cast(CT_Tbl, element("w:tbl/w:tblGrid/(w:gridCol,w:gridCol)")), table_)
@@ -656,7 +656,7 @@ class Describe_Columns:
 
 
 class Describe_Row:
-    """Unit-test suite for `docx.table._Row` objects."""
+    """Unit-test suite for `python_docx.table._Row` objects."""
 
     @pytest.mark.parametrize(
         ("tr_cxml", "expected_value"),
@@ -848,7 +848,7 @@ class Describe_Row:
 
 
 class Describe_Rows:
-    """Unit-test suite for `docx.table._Rows` objects."""
+    """Unit-test suite for `python_docx.table._Rows` objects."""
 
     @pytest.mark.parametrize(
         ("tbl_cxml", "expected_len"),

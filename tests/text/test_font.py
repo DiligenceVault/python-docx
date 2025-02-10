@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.text.run module."""
+"""Test suite for the python_docx.text.run module."""
 
 from __future__ import annotations
 
@@ -20,7 +20,7 @@ from ..unitutil.mock import Mock, class_mock, instance_mock
 
 
 class DescribeFont:
-    """Unit-test suite for `docx.text.font.Font`."""
+    """Unit-test suite for `python_docx.text.font.Font`."""
 
     def it_provides_access_to_its_color_object(self, ColorFormat_: Mock, color_: Mock):
         r = cast(CT_R, element("w:r"))
@@ -434,4 +434,4 @@ class DescribeFont:
 
     @pytest.fixture
     def ColorFormat_(self, request: FixtureRequest, color_: Mock):
-        return class_mock(request, "docx.text.font.ColorFormat", return_value=color_)
+        return class_mock(request, "python_docx.text.font.ColorFormat", return_value=color_)

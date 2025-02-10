@@ -14,7 +14,7 @@ from python_docx.text.parfmt import ParagraphFormat
 from python_docx.text.run import Run
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.enum.text import WD_PARAGRAPH_ALIGNMENT
     from python_docx.oxml.text.paragraph import CT_P
     from python_docx.styles.style import CharacterStyle

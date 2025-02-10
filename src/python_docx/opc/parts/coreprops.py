@@ -19,7 +19,7 @@ class CorePropertiesPart(XmlPart):
     """Corresponds to part named ``/docProps/core.xml``.
 
     The "core" is short for "Dublin Core" and contains document metadata relatively common across
-    documents of all types, not just DOCX.
+    documents of all types, not just python_docx.
     """
 
     @classmethod

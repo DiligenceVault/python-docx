@@ -14,7 +14,7 @@ from python_docx.section import Section, Sections
 from python_docx.shared import ElementProxy, Emu
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.oxml.document import CT_Body, CT_Document
     from python_docx.parts.document import DocumentPart
     from python_docx.settings import Settings
@@ -27,7 +27,7 @@ if TYPE_CHECKING:
 class Document(ElementProxy):
     """WordprocessingML (WML) document.
 
-    Not intended to be constructed directly. Use :func:`docx.Document` to open or create
+    Not intended to be constructed directly. Use :func:`python_docx.Document` to open or create
     a document.
     """
 

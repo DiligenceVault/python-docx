@@ -1,4 +1,4 @@
-"""Test suite for the docx.oxml.text.hyperlink module."""
+"""Test suite for the python_docx.oxml.text.hyperlink module."""
 
 from typing import cast
 

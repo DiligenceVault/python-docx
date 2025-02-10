@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.parts.document module."""
+"""Unit test suite for the python_docx.parts.document module."""
 
 import pytest
 
@@ -242,7 +242,7 @@ class DescribeDocumentPart:
 
     @pytest.fixture
     def FooterPart_(self, request):
-        return class_mock(request, "docx.parts.document.FooterPart")
+        return class_mock(request, "python_docx.parts.document.FooterPart")
 
     @pytest.fixture
     def footer_part_(self, request):
@@ -250,7 +250,7 @@ class DescribeDocumentPart:
 
     @pytest.fixture
     def HeaderPart_(self, request):
-        return class_mock(request, "docx.parts.document.HeaderPart")
+        return class_mock(request, "python_docx.parts.document.HeaderPart")
 
     @pytest.fixture
     def header_part_(self, request):
@@ -258,11 +258,11 @@ class DescribeDocumentPart:
 
     @pytest.fixture
     def InlineShapes_(self, request):
-        return class_mock(request, "docx.parts.document.InlineShapes")
+        return class_mock(request, "python_docx.parts.document.InlineShapes")
 
     @pytest.fixture
     def NumberingPart_(self, request):
-        return class_mock(request, "docx.parts.document.NumberingPart")
+        return class_mock(request, "python_docx.parts.document.NumberingPart")
 
     @pytest.fixture
     def numbering_part_(self, request):
@@ -290,7 +290,7 @@ class DescribeDocumentPart:
 
     @pytest.fixture
     def SettingsPart_(self, request):
-        return class_mock(request, "docx.parts.document.SettingsPart")
+        return class_mock(request, "python_docx.parts.document.SettingsPart")
 
     @pytest.fixture
     def settings_(self, request):
@@ -314,7 +314,7 @@ class DescribeDocumentPart:
 
     @pytest.fixture
     def StylesPart_(self, request):
-        return class_mock(request, "docx.parts.document.StylesPart")
+        return class_mock(request, "python_docx.parts.document.StylesPart")
 
     @pytest.fixture
     def styles_part_(self, request):

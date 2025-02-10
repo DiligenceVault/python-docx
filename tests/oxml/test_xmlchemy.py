@@ -1,4 +1,4 @@
-"""Test suite for docx.oxml.xmlchemy."""
+"""Test suite for python_docx.oxml.xmlchemy."""
 
 import pytest
 

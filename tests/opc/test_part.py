@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for docx.opc.part module"""
+"""Unit test suite for python_docx.opc.part module"""
 
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ from ..unitutil.mock import (
 
 
 class DescribePart:
-    """Unit-test suite for `docx.opc.part.Part` objects."""
+    """Unit-test suite for `python_docx.opc.part.Part` objects."""
 
     def it_can_be_constructed_by_PartFactory(self, package_: Mock, init__: Mock):
         part = Part.load(PackURI("/part/name"), "content/type", b"1be2", package_)
@@ -78,7 +78,7 @@ class DescribePart:
 
 
 class DescribePartRelationshipManagementInterface:
-    """Unit-test suite for `docx.opc.package.Part` relationship behaviors."""
+    """Unit-test suite for `python_docx.opc.package.Part` relationship behaviors."""
 
     def it_provides_access_to_its_relationships(
         self, Relationships_: Mock, partname_: Mock, rels_: Mock
@@ -174,7 +174,7 @@ class DescribePartRelationshipManagementInterface:
 
     @pytest.fixture
     def Relationships_(self, request: FixtureRequest):
-        return class_mock(request, "docx.opc.part.Relationships")
+        return class_mock(request, "python_docx.opc.part.Relationships")
 
     @pytest.fixture
     def rel_(self, request: FixtureRequest):
@@ -239,7 +239,7 @@ class DescribePartFactory:
 
     @pytest.fixture
     def cls_method_fn_(self, request, cls_selector_fn_):
-        return function_mock(request, "docx.opc.part.cls_method_fn", return_value=cls_selector_fn_)
+        return function_mock(request, "python_docx.opc.part.cls_method_fn", return_value=cls_selector_fn_)
 
     @pytest.fixture
     def cls_selector_fixture(
@@ -408,7 +408,7 @@ class DescribeXmlPart:
 
     @pytest.fixture
     def parse_xml_(self, request, element_):
-        return function_mock(request, "docx.opc.part.parse_xml", return_value=element_)
+        return function_mock(request, "python_docx.opc.part.parse_xml", return_value=element_)
 
     @pytest.fixture
     def partname_(self, request):
@@ -420,4 +420,4 @@ class DescribeXmlPart:
 
     @pytest.fixture
     def serialize_part_xml_(self, request):
-        return function_mock(request, "docx.opc.part.serialize_part_xml")
+        return function_mock(request, "python_docx.opc.part.serialize_part_xml")

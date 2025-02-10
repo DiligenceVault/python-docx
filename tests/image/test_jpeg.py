@@ -1,4 +1,4 @@
-"""Unit test suite for docx.image.jpeg module"""
+"""Unit test suite for python_docx.image.jpeg module"""
 
 import io
 
@@ -89,7 +89,7 @@ class DescribeJpeg:
 
     @pytest.fixture
     def _JfifMarkers_(self, request, jfif_markers_):
-        _JfifMarkers_ = class_mock(request, "docx.image.jpeg._JfifMarkers")
+        _JfifMarkers_ = class_mock(request, "python_docx.image.jpeg._JfifMarkers")
         _JfifMarkers_.from_stream.return_value = jfif_markers_
         return _JfifMarkers_
 
@@ -182,7 +182,7 @@ class Describe_JfifMarkers:
 
     @pytest.fixture
     def _MarkerParser_(self, request, marker_parser_):
-        _MarkerParser_ = class_mock(request, "docx.image.jpeg._MarkerParser")
+        _MarkerParser_ = class_mock(request, "python_docx.image.jpeg._MarkerParser")
         _MarkerParser_.from_stream.return_value = marker_parser_
         return _MarkerParser_
 
@@ -349,7 +349,7 @@ class Describe_App1Marker:
         bytes_ = b"xfillerxMM\x00*\x00\x00\x00\x42"
         stream_reader = StreamReader(io.BytesIO(bytes_), BIG_ENDIAN)
         BytesIO_ = class_mock(
-            request, "docx.image.jpeg.io.BytesIO", return_value=substream_
+            request, "python_docx.image.jpeg.io.BytesIO", return_value=substream_
         )
         offset, segment_length, segment_bytes = 0, 16, bytes_[8:]
         return (
@@ -369,7 +369,7 @@ class Describe_App1Marker:
 
     @pytest.fixture
     def Tiff_(self, request, tiff_):
-        Tiff_ = class_mock(request, "docx.image.jpeg.Tiff")
+        Tiff_ = class_mock(request, "python_docx.image.jpeg.Tiff")
         Tiff_.from_stream.return_value = tiff_
         return Tiff_
 
@@ -455,15 +455,15 @@ class Describe_MarkerFactory:
 
     @pytest.fixture
     def _App0Marker_(self, request):
-        return class_mock(request, "docx.image.jpeg._App0Marker")
+        return class_mock(request, "python_docx.image.jpeg._App0Marker")
 
     @pytest.fixture
     def _App1Marker_(self, request):
-        return class_mock(request, "docx.image.jpeg._App1Marker")
+        return class_mock(request, "python_docx.image.jpeg._App1Marker")
 
     @pytest.fixture
     def _Marker_(self, request):
-        return class_mock(request, "docx.image.jpeg._Marker")
+        return class_mock(request, "python_docx.image.jpeg._Marker")
 
     @pytest.fixture
     def offset_(self, request):
@@ -471,7 +471,7 @@ class Describe_MarkerFactory:
 
     @pytest.fixture
     def _SofMarker_(self, request):
-        return class_mock(request, "docx.image.jpeg._SofMarker")
+        return class_mock(request, "python_docx.image.jpeg._SofMarker")
 
     @pytest.fixture
     def stream_(self, request):
@@ -599,12 +599,12 @@ class Describe_MarkerParser:
     @pytest.fixture
     def _MarkerFactory_(self, request, soi_, app0_, eoi_):
         return class_mock(
-            request, "docx.image.jpeg._MarkerFactory", side_effect=[soi_, app0_, eoi_]
+            request, "python_docx.image.jpeg._MarkerFactory", side_effect=[soi_, app0_, eoi_]
         )
 
     @pytest.fixture
     def _MarkerFinder_(self, request, marker_finder_):
-        _MarkerFinder_ = class_mock(request, "docx.image.jpeg._MarkerFinder")
+        _MarkerFinder_ = class_mock(request, "python_docx.image.jpeg._MarkerFinder")
         _MarkerFinder_.from_stream.return_value = marker_finder_
         return _MarkerFinder_
 
@@ -627,7 +627,7 @@ class Describe_MarkerParser:
     @pytest.fixture
     def StreamReader_(self, request, stream_reader_):
         return class_mock(
-            request, "docx.image.jpeg.StreamReader", return_value=stream_reader_
+            request, "python_docx.image.jpeg.StreamReader", return_value=stream_reader_
         )
 
     @pytest.fixture

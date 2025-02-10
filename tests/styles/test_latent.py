@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.styles.latent module."""
+"""Unit test suite for the python_docx.styles.latent module."""
 
 import pytest
 

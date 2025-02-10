@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.parts.settings module"""
+"""Unit test suite for the python_docx.parts.settings module"""
 
 import pytest
 
@@ -62,7 +62,7 @@ class DescribeSettingsPart:
     @pytest.fixture
     def Settings_(self, request, settings_):
         return class_mock(
-            request, "docx.parts.settings.Settings", return_value=settings_
+            request, "python_docx.parts.settings.Settings", return_value=settings_
         )
 
     @pytest.fixture

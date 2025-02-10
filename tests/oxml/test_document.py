@@ -1,4 +1,4 @@
-"""Unit-test suite for `docx.oxml.document` module."""
+"""Unit-test suite for `python_docx.oxml.document` module."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from ..unitutil.cxml import element
 
 
 class DescribeCT_Body:
-    """Unit-test suite for selected units of `docx.oxml.document.CT_Body`."""
+    """Unit-test suite for selected units of `python_docx.oxml.document.CT_Body`."""
 
     def it_knows_its_inner_content_block_item_elements(self):
         body = cast(CT_Body, element("w:body/(w:tbl, w:p,w:p)"))

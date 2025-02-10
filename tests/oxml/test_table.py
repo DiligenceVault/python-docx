@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.oxml.text module."""
+"""Test suite for the python_docx.oxml.text module."""
 
 from __future__ import annotations
 
@@ -42,7 +42,7 @@ class DescribeCT_Row:
 
 
 class DescribeCT_Tc:
-    """Unit-test suite for `docx.oxml.table.CT_Tc` objects."""
+    """Unit-test suite for `python_docx.oxml.table.CT_Tc` objects."""
 
     @pytest.mark.parametrize(
         ("tr_cxml", "tc_idx", "expected_value"),

@@ -1,7 +1,7 @@
 # pyright: reportPrivateUsage=false
 # pyright: reportUnknownMemberType=false
 
-"""Unit test suite for the docx.document module."""
+"""Unit test suite for the python_docx.document module."""
 
 from __future__ import annotations
 
@@ -29,7 +29,7 @@ from .unitutil.mock import Mock, class_mock, instance_mock, method_mock, propert
 
 
 class DescribeDocument:
-    """Unit-test suite for `docx.Document`."""
+    """Unit-test suite for `python_docx.Document`."""
 
     def it_can_add_a_heading(self, add_heading_fixture, add_paragraph_, paragraph_):
         level, style = add_heading_fixture
@@ -295,7 +295,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def _Body_(self, request, body_):
-        return class_mock(request, "docx.document._Body", return_value=body_)
+        return class_mock(request, "python_docx.document._Body", return_value=body_)
 
     @pytest.fixture
     def body_(self, request):
@@ -339,7 +339,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def Section_(self, request):
-        return class_mock(request, "docx.document.Section")
+        return class_mock(request, "python_docx.document.Section")
 
     @pytest.fixture
     def section_(self, request):
@@ -347,7 +347,7 @@ class DescribeDocument:
 
     @pytest.fixture
     def Sections_(self, request):
-        return class_mock(request, "docx.document.Sections")
+        return class_mock(request, "python_docx.document.Sections")
 
     @pytest.fixture
     def sections_(self, request):

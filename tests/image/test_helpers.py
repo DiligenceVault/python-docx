@@ -1,4 +1,4 @@
-"""Test suite for docx.image.helpers module."""
+"""Test suite for python_docx.image.helpers module."""
 
 import io
 

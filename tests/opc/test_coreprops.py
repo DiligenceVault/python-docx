@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the docx.opc.coreprops module."""
+"""Unit test suite for the python_docx.opc.coreprops module."""
 
 from __future__ import annotations
 
@@ -17,7 +17,7 @@ if TYPE_CHECKING:
 
 
 class DescribeCoreProperties:
-    """Unit-test suite for `docx.opc.coreprops.CoreProperties` objects."""
+    """Unit-test suite for `python_docx.opc.coreprops.CoreProperties` objects."""
 
     @pytest.mark.parametrize(
         ("prop_name", "expected_value"),

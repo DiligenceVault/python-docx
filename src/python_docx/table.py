@@ -14,7 +14,7 @@ from python_docx.oxml.table import CT_TblGridCol
 from python_docx.shared import Inches, Parented, StoryChild, lazyproperty
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.enum.table import WD_ROW_HEIGHT_RULE, WD_TABLE_ALIGNMENT, WD_TABLE_DIRECTION
     from python_docx.oxml.table import CT_Row, CT_Tbl, CT_TblPr, CT_Tc
     from python_docx.shared import Length

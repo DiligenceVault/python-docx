@@ -1,4 +1,4 @@
-"""Test suite for the docx.opc.packuri module."""
+"""Test suite for the python_docx.opc.packuri module."""
 
 import pytest
 

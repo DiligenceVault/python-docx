@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.styles.styles module."""
+"""Unit test suite for the python_docx.styles.styles module."""
 
 import pytest
 
@@ -388,7 +388,7 @@ class DescribeStyles:
     @pytest.fixture
     def LatentStyles_(self, request, latent_styles_):
         return class_mock(
-            request, "docx.styles.styles.LatentStyles", return_value=latent_styles_
+            request, "python_docx.styles.styles.LatentStyles", return_value=latent_styles_
         )
 
     @pytest.fixture
@@ -401,7 +401,7 @@ class DescribeStyles:
 
     @pytest.fixture
     def StyleFactory_(self, request):
-        return function_mock(request, "docx.styles.styles.StyleFactory")
+        return function_mock(request, "python_docx.styles.styles.StyleFactory")
 
     @pytest.fixture
     def style_elm_(self, request):

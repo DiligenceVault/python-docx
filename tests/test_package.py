@@ -1,4 +1,4 @@
-"""Unit test suite for docx.package module."""
+"""Unit test suite for python_docx.package module."""
 
 import pytest
 
@@ -126,7 +126,7 @@ class DescribeImageParts:
 
     @pytest.fixture
     def Image_(self, request):
-        return class_mock(request, "docx.package.Image")
+        return class_mock(request, "python_docx.package.Image")
 
     @pytest.fixture
     def image_(self, request):
@@ -134,7 +134,7 @@ class DescribeImageParts:
 
     @pytest.fixture
     def ImagePart_(self, request):
-        return class_mock(request, "docx.package.ImagePart")
+        return class_mock(request, "python_docx.package.ImagePart")
 
     @pytest.fixture
     def image_part_(self, request):

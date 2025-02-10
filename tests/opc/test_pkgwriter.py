@@ -87,7 +87,7 @@ class DescribePackageWriter:
 
     @pytest.fixture
     def _ContentTypesItem_(self, request: FixtureRequest, cti_):
-        _ContentTypesItem_ = class_mock(request, "docx.opc.pkgwriter._ContentTypesItem")
+        _ContentTypesItem_ = class_mock(request, "python_docx.opc.pkgwriter._ContentTypesItem")
         _ContentTypesItem_.from_parts.return_value = cti_
         return _ContentTypesItem_
 
@@ -105,7 +105,7 @@ class DescribePackageWriter:
 
     @pytest.fixture
     def PhysPkgWriter_(self):
-        p = patch("docx.opc.pkgwriter.PhysPkgWriter")
+        p = patch("python_docx.opc.pkgwriter.PhysPkgWriter")
         yield p.start()
         p.stop()
 

@@ -1,4 +1,4 @@
-"""Sub-package module for docx.styles sub-package."""
+"""Sub-package module for python_docx.styles sub-package."""
 
 from __future__ import annotations
 

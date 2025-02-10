@@ -1,4 +1,4 @@
-"""Test suite for the docx.text.tabstops module."""
+"""Test suite for the python_docx.text.tabstops module."""
 
 import pytest
 
@@ -322,7 +322,7 @@ class DescribeTabStops:
 
     @pytest.fixture
     def TabStop_(self, request, tab_stop_):
-        return class_mock(request, "docx.text.tabstops.TabStop", return_value=tab_stop_)
+        return class_mock(request, "python_docx.text.tabstops.TabStop", return_value=tab_stop_)
 
     @pytest.fixture
     def tab_stop_(self, request):

@@ -1,4 +1,4 @@
-"""Unit test suite for docx.image.tiff module"""
+"""Unit test suite for python_docx.image.tiff module"""
 
 import io
 
@@ -66,7 +66,7 @@ class DescribeTiff:
 
     @pytest.fixture
     def _TiffParser_(self, request, tiff_parser_):
-        _TiffParser_ = class_mock(request, "docx.image.tiff._TiffParser")
+        _TiffParser_ = class_mock(request, "python_docx.image.tiff._TiffParser")
         _TiffParser_.parse.return_value = tiff_parser_
         return _TiffParser_
 
@@ -147,7 +147,7 @@ class Describe_TiffParser:
 
     @pytest.fixture
     def _IfdEntries_(self, request, ifd_entries_):
-        _IfdEntries_ = class_mock(request, "docx.image.tiff._IfdEntries")
+        _IfdEntries_ = class_mock(request, "python_docx.image.tiff._IfdEntries")
         _IfdEntries_.from_stream.return_value = ifd_entries_
         return _IfdEntries_
 
@@ -187,7 +187,7 @@ class Describe_TiffParser:
     @pytest.fixture
     def StreamReader_(self, request, stream_rdr_):
         return class_mock(
-            request, "docx.image.tiff.StreamReader", return_value=stream_rdr_
+            request, "python_docx.image.tiff.StreamReader", return_value=stream_rdr_
         )
 
     @pytest.fixture
@@ -245,7 +245,7 @@ class Describe_IfdEntries:
     @pytest.fixture
     def _IfdParser_(self, request, ifd_parser_):
         return class_mock(
-            request, "docx.image.tiff._IfdParser", return_value=ifd_parser_
+            request, "python_docx.image.tiff._IfdParser", return_value=ifd_parser_
         )
 
     @pytest.fixture
@@ -291,7 +291,7 @@ class Describe_IfdParser:
     def _IfdEntryFactory_(self, request, ifd_entry_, ifd_entry_2_):
         return function_mock(
             request,
-            "docx.image.tiff._IfdEntryFactory",
+            "python_docx.image.tiff._IfdEntryFactory",
             side_effect=[ifd_entry_, ifd_entry_2_],
         )
 
@@ -352,31 +352,31 @@ class Describe_IfdEntryFactory:
 
     @pytest.fixture
     def _IfdEntry_(self, request, ifd_entry_):
-        _IfdEntry_ = class_mock(request, "docx.image.tiff._IfdEntry")
+        _IfdEntry_ = class_mock(request, "python_docx.image.tiff._IfdEntry")
         _IfdEntry_.from_stream.return_value = ifd_entry_
         return _IfdEntry_
 
     @pytest.fixture
     def _AsciiIfdEntry_(self, request, ifd_entry_):
-        _AsciiIfdEntry_ = class_mock(request, "docx.image.tiff._AsciiIfdEntry")
+        _AsciiIfdEntry_ = class_mock(request, "python_docx.image.tiff._AsciiIfdEntry")
         _AsciiIfdEntry_.from_stream.return_value = ifd_entry_
         return _AsciiIfdEntry_
 
     @pytest.fixture
     def _ShortIfdEntry_(self, request, ifd_entry_):
-        _ShortIfdEntry_ = class_mock(request, "docx.image.tiff._ShortIfdEntry")
+        _ShortIfdEntry_ = class_mock(request, "python_docx.image.tiff._ShortIfdEntry")
         _ShortIfdEntry_.from_stream.return_value = ifd_entry_
         return _ShortIfdEntry_
 
     @pytest.fixture
     def _LongIfdEntry_(self, request, ifd_entry_):
-        _LongIfdEntry_ = class_mock(request, "docx.image.tiff._LongIfdEntry")
+        _LongIfdEntry_ = class_mock(request, "python_docx.image.tiff._LongIfdEntry")
         _LongIfdEntry_.from_stream.return_value = ifd_entry_
         return _LongIfdEntry_
 
     @pytest.fixture
     def _RationalIfdEntry_(self, request, ifd_entry_):
-        _RationalIfdEntry_ = class_mock(request, "docx.image.tiff._RationalIfdEntry")
+        _RationalIfdEntry_ = class_mock(request, "python_docx.image.tiff._RationalIfdEntry")
         _RationalIfdEntry_.from_stream.return_value = ifd_entry_
         return _RationalIfdEntry_
 

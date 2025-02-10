@@ -13,7 +13,7 @@ from python_docx.shared import Parented
 from python_docx.text.run import Run
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.oxml.text.hyperlink import CT_Hyperlink
 
 

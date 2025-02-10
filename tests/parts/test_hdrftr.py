@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.parts.hdrftr module."""
+"""Unit test suite for the python_docx.parts.hdrftr module."""
 
 import pytest
 
@@ -77,7 +77,7 @@ class DescribeFooterPart:
 
     @pytest.fixture
     def parse_xml_(self, request):
-        return function_mock(request, "docx.parts.hdrftr.parse_xml")
+        return function_mock(request, "python_docx.parts.hdrftr.parse_xml")
 
 
 class DescribeHeaderPart:
@@ -145,4 +145,4 @@ class DescribeHeaderPart:
 
     @pytest.fixture
     def parse_xml_(self, request):
-        return function_mock(request, "docx.parts.hdrftr.parse_xml")
+        return function_mock(request, "python_docx.parts.hdrftr.parse_xml")

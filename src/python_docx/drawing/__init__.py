@@ -8,7 +8,7 @@ from python_docx.oxml.drawing import CT_Drawing
 from python_docx.shared import Parented
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
 
 
 class Drawing(Parented):

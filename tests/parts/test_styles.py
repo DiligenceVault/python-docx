@@ -1,4 +1,4 @@
-"""Test suite for the docx.parts.styles module."""
+"""Test suite for the python_docx.parts.styles module."""
 
 import pytest
 
@@ -38,7 +38,7 @@ class DescribeStylesPart:
 
     @pytest.fixture
     def Styles_(self, request, styles_):
-        return class_mock(request, "docx.parts.styles.Styles", return_value=styles_)
+        return class_mock(request, "python_docx.parts.styles.Styles", return_value=styles_)
 
     @pytest.fixture
     def styles_(self, request):

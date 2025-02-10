@@ -1,4 +1,4 @@
-"""Test suite for docx.text.parfmt module, containing the ParagraphFormat object."""
+"""Test suite for python_docx.text.parfmt module, containing the ParagraphFormat object."""
 
 import pytest
 
@@ -479,7 +479,7 @@ class DescribeParagraphFormat:
 
     @pytest.fixture
     def TabStops_(self, request, tab_stops_):
-        return class_mock(request, "docx.text.parfmt.TabStops", return_value=tab_stops_)
+        return class_mock(request, "python_docx.text.parfmt.TabStops", return_value=tab_stops_)
 
     @pytest.fixture
     def tab_stops_(self, request):

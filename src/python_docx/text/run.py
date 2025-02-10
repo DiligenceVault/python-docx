@@ -16,7 +16,7 @@ from python_docx.text.font import Font
 from python_docx.text.pagebreak import RenderedPageBreak
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.enum.text import WD_UNDERLINE
     from python_docx.oxml.text.run import CT_R, CT_Text
     from python_docx.shared import Length
@@ -39,7 +39,7 @@ class Run(StoryChild):
         """Add a break element of `break_type` to this run.
 
         `break_type` can take the values `WD_BREAK.LINE`, `WD_BREAK.PAGE`, and
-        `WD_BREAK.COLUMN` where `WD_BREAK` is imported from `docx.enum.text`.
+        `WD_BREAK.COLUMN` where `WD_BREAK` is imported from `python_docx.enum.text`.
         `break_type` defaults to `WD_BREAK.LINE`.
         """
         type_, clear = {

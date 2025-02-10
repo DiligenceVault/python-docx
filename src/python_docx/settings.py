@@ -7,7 +7,7 @@ from typing import TYPE_CHECKING, cast
 from python_docx.shared import ElementProxy
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.oxml.settings import CT_Settings
     from python_docx.oxml.xmlchemy import BaseOxmlElement
 

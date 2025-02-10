@@ -1,4 +1,4 @@
-"""Test suite for the docx.parts.numbering module."""
+"""Test suite for the python_docx.parts.numbering module."""
 
 import pytest
 
@@ -41,7 +41,7 @@ class DescribeNumberingPart:
     def _NumberingDefinitions_(self, request, numbering_definitions_):
         return class_mock(
             request,
-            "docx.parts.numbering._NumberingDefinitions",
+            "python_docx.parts.numbering._NumberingDefinitions",
             return_value=numbering_definitions_,
         )
 

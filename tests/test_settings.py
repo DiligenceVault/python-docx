@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.settings module."""
+"""Unit test suite for the python_docx.settings module."""
 
 import pytest
 

@@ -1,4 +1,4 @@
-"""Unit-test suite for `docx.oxml.section` module."""
+"""Unit-test suite for `python_docx.oxml.section` module."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from ..unitutil.cxml import element
 
 
 class DescribeCT_HdrFtr:
-    """Unit-test suite for selected units of `docx.oxml.section.CT_HdrFtr`."""
+    """Unit-test suite for selected units of `python_docx.oxml.section.CT_HdrFtr`."""
 
     def it_knows_its_inner_content_block_item_elements(self):
         hdr = cast(CT_HdrFtr, element("w:hdr/(w:tbl,w:tbl,w:p)"))

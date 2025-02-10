@@ -1,4 +1,4 @@
-"""Test suite for docx.opc.phys_pkg module."""
+"""Test suite for python_docx.opc.phys_pkg module."""
 
 import hashlib
 import io
@@ -174,9 +174,9 @@ class DescribeZipPkgWriter:
 
 @pytest.fixture
 def tmp_docx_path(tmpdir):
-    return str(tmpdir.join("test_python-docx.docx"))
+    return str(tmpdir.join("test_python-python_docx.docx"))
 
 
 @pytest.fixture
 def ZipFile_(request):
-    return class_mock(request, "docx.opc.phys_pkg.ZipFile")
+    return class_mock(request, "python_docx.opc.phys_pkg.ZipFile")

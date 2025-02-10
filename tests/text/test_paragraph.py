@@ -1,4 +1,4 @@
-"""Unit test suite for the docx.text.paragraph module."""
+"""Unit test suite for the python_docx.text.paragraph module."""
 
 from typing import List, cast
 
@@ -19,7 +19,7 @@ from ..unitutil.mock import call, class_mock, instance_mock, method_mock, proper
 
 
 class DescribeParagraph:
-    """Unit-test suite for `docx.text.run.Paragraph`."""
+    """Unit-test suite for `python_docx.text.run.Paragraph`."""
 
     @pytest.mark.parametrize(
         ("p_cxml", "expected_value"),
@@ -370,7 +370,7 @@ class DescribeParagraph:
     def ParagraphFormat_(self, request, paragraph_format_):
         return class_mock(
             request,
-            "docx.text.paragraph.ParagraphFormat",
+            "python_docx.text.paragraph.ParagraphFormat",
             return_value=paragraph_format_,
         )
 
@@ -386,7 +386,7 @@ class DescribeParagraph:
     def Run_(self, request, runs_):
         run_, run_2_ = runs_
         return class_mock(
-            request, "docx.text.paragraph.Run", side_effect=[run_, run_2_]
+            request, "python_docx.text.paragraph.Run", side_effect=[run_, run_2_]
         )
 
     @pytest.fixture

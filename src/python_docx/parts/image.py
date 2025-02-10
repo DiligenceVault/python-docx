@@ -70,7 +70,7 @@ class ImagePart(Part):
 
     @classmethod
     def load(cls, partname: PackURI, content_type: str, blob: bytes, package: OpcPackage):
-        """Called by ``docx.opc.package.PartFactory`` to load an image part from a
+        """Called by ``python_docx.opc.package.PartFactory`` to load an image part from a
         package being opened by ``Document(...)`` call."""
         return cls(partname, content_type, blob)
 

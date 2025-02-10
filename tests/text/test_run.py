@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Test suite for the docx.text.run module."""
+"""Test suite for the python_docx.text.run module."""
 
 from __future__ import annotations
 
@@ -22,7 +22,7 @@ from ..unitutil.mock import class_mock, instance_mock, property_mock
 
 
 class DescribeRun:
-    """Unit-test suite for `docx.text.run.Run`."""
+    """Unit-test suite for `python_docx.text.run.Run`."""
 
     def it_knows_its_bool_prop_states(self, bool_prop_get_fixture):
         run, prop_name, expected_state = bool_prop_get_fixture
@@ -382,7 +382,7 @@ class DescribeRun:
 
     @pytest.fixture
     def Font_(self, request, font_):
-        return class_mock(request, "docx.text.run.Font", return_value=font_)
+        return class_mock(request, "python_docx.text.run.Font", return_value=font_)
 
     @pytest.fixture
     def font_(self, request):
@@ -390,7 +390,7 @@ class DescribeRun:
 
     @pytest.fixture
     def InlineShape_(self, request):
-        return class_mock(request, "docx.text.run.InlineShape")
+        return class_mock(request, "python_docx.text.run.InlineShape")
 
     @pytest.fixture
     def part_prop_(self, request, document_part_):
@@ -402,4 +402,4 @@ class DescribeRun:
 
     @pytest.fixture
     def Text_(self, request):
-        return class_mock(request, "docx.text.run._Text")
+        return class_mock(request, "python_docx.text.run._Text")

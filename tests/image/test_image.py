@@ -1,4 +1,4 @@
-"""Unit test suite for docx.image package"""
+"""Unit test suite for python_docx.image package"""
 
 import io
 
@@ -223,7 +223,7 @@ class DescribeImage:
 
     @pytest.fixture
     def BytesIO_(self, request, stream_):
-        return class_mock(request, "docx.image.image.io.BytesIO", return_value=stream_)
+        return class_mock(request, "python_docx.image.image.io.BytesIO", return_value=stream_)
 
     @pytest.fixture
     def filename_(self, request):
@@ -246,7 +246,7 @@ class DescribeImage:
     @pytest.fixture
     def _ImageHeaderFactory_(self, request, image_header_):
         return function_mock(
-            request, "docx.image.image._ImageHeaderFactory", return_value=image_header_
+            request, "python_docx.image.image._ImageHeaderFactory", return_value=image_header_
         )
 
     @pytest.fixture

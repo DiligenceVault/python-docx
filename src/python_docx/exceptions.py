@@ -1,4 +1,4 @@
-"""Exceptions used with python-docx.
+"""Exceptions used with python-python_docx.
 
 The base exception class is PythonDocxError.
 """

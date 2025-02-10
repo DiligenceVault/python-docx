@@ -8,7 +8,7 @@ from python_docx.oxml.text.pagebreak import CT_LastRenderedPageBreak
 from python_docx.shared import Parented
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.text.paragraph import Paragraph
 
 

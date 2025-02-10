@@ -1,4 +1,4 @@
-"""Test suite for docx.oxml.ns."""
+"""Test suite for python_docx.oxml.ns."""
 
 import pytest
 

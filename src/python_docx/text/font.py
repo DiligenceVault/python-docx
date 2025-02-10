@@ -257,7 +257,7 @@ class Font(ElementProxy):
 
         |None| indicates the font size should be inherited from the style hierarchy.
         |Length| is a subclass of |int| having properties for convenient conversion into
-        points or other length units. The :class:`docx.shared.Pt` class allows
+        points or other length units. The :class:`python_docx.shared.Pt` class allows
         convenient specification of point values::
 
             >>> font.size = Pt(24)

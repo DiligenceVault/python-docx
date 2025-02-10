@@ -1,6 +1,6 @@
 # pyright: reportPrivateUsage=false
 
-"""Unit test suite for the docx.opc.rel module."""
+"""Unit test suite for the python_docx.opc.rel module."""
 
 import pytest
 
@@ -148,7 +148,7 @@ class DescribeRelationships:
 
     @pytest.fixture
     def _Relationship_(self, request):
-        return class_mock(request, "docx.opc.rel._Relationship")
+        return class_mock(request, "python_docx.opc.rel._Relationship")
 
     @pytest.fixture
     def _rel_with_target_known_by_reltype(self, _rId, reltype, _target_part, _baseURI):

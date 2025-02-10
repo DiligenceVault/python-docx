@@ -18,12 +18,12 @@ def given_I_have_python_docx_installed(context):
 # when =====================================================
 
 
-@when("I call docx.Document() with no arguments")
+@when("I call python_docx.Document() with no arguments")
 def when_I_call_docx_Document_with_no_arguments(context):
     context.document = Document()
 
 
-@when("I call docx.Document() with the path of a .docx file")
+@when("I call python_docx.Document() with the path of a .docx file")
 def when_I_call_docx_Document_with_the_path_of_a_docx_file(context):
     context.document = Document(test_docx("doc-default"))
 
@@ -34,7 +34,7 @@ def when_I_call_docx_Document_with_the_path_of_a_docx_file(context):
 @then("document is a Document object")
 def then_document_is_a_Document_object(context):
     document = context.document
-    assert isinstance(document, docx.document.Document)
+    assert isinstance(document, python_docx.document.Document)
 
 
 @then("the last paragraph contains the text I specified")

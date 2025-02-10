@@ -1,4 +1,4 @@
-"""Test suite for the docx.oxml.text.run module."""
+"""Test suite for the python_docx.oxml.text.run module."""
 
 from typing import cast
 

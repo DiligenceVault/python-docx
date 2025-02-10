@@ -72,7 +72,7 @@ class InlineShape:
     @property
     def type(self):
         """The type of this inline shape as a member of
-        ``docx.enum.shape.WD_INLINE_SHAPE``, e.g. ``LINKED_PICTURE``.
+        ``python_docx.enum.shape.WD_INLINE_SHAPE``, e.g. ``LINKED_PICTURE``.
 
         Read-only.
         """

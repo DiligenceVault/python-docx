@@ -16,7 +16,7 @@ from typing import (
 )
 
 if TYPE_CHECKING:
-    import docx.types as t
+    import python_docx.types as t
     from python_docx.opc.part import XmlPart
     from python_docx.oxml.xmlchemy import BaseOxmlElement
     from python_docx.parts.story import StoryPart

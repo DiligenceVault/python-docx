@@ -67,7 +67,7 @@ release = __version__
 # file that is read. This is the right place to add substitutions that should
 # be available in every file.
 rst_epilog = """
-.. |api-Document| replace:: :class:`docx.api.Document`
+.. |api-Document| replace:: :class:`python_docx.api.Document`
 
 .. |AttributeError| replace:: :exc:`.AttributeError`
 
@@ -326,7 +326,7 @@ latex_elements = {
 #  author,
 #  documentclass [howto/manual]).
 latex_documents = [
-    ("index", "python-docx.tex", "python-docx Documentation", "Steve Canny", "manual"),
+    ("index", "python-python_docx.tex", "python-docx Documentation", "Steve Canny", "manual"),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of

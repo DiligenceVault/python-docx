@@ -1,6 +1,6 @@
 # pyright: reportImportCycles=false
 
-"""XML parser for python-docx."""
+"""XML parser for python-python_docx."""
 
 from __future__ import annotations
 
