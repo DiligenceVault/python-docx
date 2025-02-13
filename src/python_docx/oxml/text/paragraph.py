@@ -6,7 +6,7 @@ from __future__ import annotations
 
 from typing import TYPE_CHECKING, Callable, Dict, List, cast
 
-from python_docx.opc.oxml import qn
+from python_docx.oxml.ns import qn
 from python_docx.oxml.comments import (
     CT_Comment,
     CT_CommentRangeEnd,
