@@ -173,6 +173,42 @@ class Paragraph(StoryChild):
         p = self._p.add_p_before()
         return Paragraph(p, self._parent)
 
+    def mark_comment_start(
+        self,
+        text: str,
+        author: str,
+        initials: str,
+        date: str,
+        resolved: Optional[bool] = False,
+        parent: Optional["CT_Comment"] = None,
+    ) -> "CT_Comment":
+        """
+        Adds a `commentRangeStart` to this paragraph.
+        """
+        comments_part = self.part._document_part.comments_part
+        comments_extended_part = self.part._document_part.comments_extended_part
+        metadata = {
+            "author": author,
+            "initials": initials,
+            "date": date,
+            "resolved": resolved,
+            "parent": parent,
+        }
+        return self._p.mark_comment_start(comments_part, comments_extended_part, text, metadata)
+
+    def mark_comment_end(self, id: str):
+        """
+        Adds a `commentRangeEnd` and `commentReference` to this paragraph.
+
+        Raises |ValueError| if the `commentRangeStart` for this `id` is not found or
+        if `commentRangeEnd` was already added.
+        """
+        if len(self._parent._element.xpath(f"//w:commentRangeStart[@w:id='{id}']")) == 0:
+            raise ValueError("Comment start marker not found")
+        if len(self._parent._element.xpath(f"//w:commentRangeEnd[@w:id='{id}']")) > 0:
+            raise ValueError("Comment end marker was already added")
+        self._p.mark_comment_end(id)
+
     def add_comment(
         self,
         text: str,
