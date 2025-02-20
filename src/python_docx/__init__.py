@@ -14,7 +14,7 @@ from python_docx.parts.comments import CommentsExtendedPart, CommentsPart
 if TYPE_CHECKING:
     from python_docx.opc.part import Part
 
-__version__ = "1.1.2"
+__version__ = "1.1.3"
 
 
 __all__ = ["Document"]
